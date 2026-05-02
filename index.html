@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa do Marketing Local — Saia da Invisibilidade</title>
+    <meta name="description" content="O guia prático para transformar seu negócio local em um ímã de clientes usando Google, Instagram e anúncios simples.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0F172A',
+                            foreground: '#F8FAFC',
+                            glow: '#1E293B',
+                            soft: '#F1F5F9',
+                        },
+                        accent: {
+                            DEFAULT: '#F97316',
+                            foreground: '#FFFFFF',
+                            glow: '#FB923C',
+                        },
+                        success: {
+                            DEFAULT: '#22C55E',
+                            foreground: '#FFFFFF',
+                        },
+                        destructive: {
+                            DEFAULT: '#EF4444',
+                        },
+                        border: '#E2E8F0',
+                        card: '#FFFFFF',
+                        muted: {
+                            DEFAULT: '#F1F5F9',
+                            foreground: '#64748B',
+                        },
+                        background: '#F8FAFC',
+                        foreground: '#0F172A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'card': '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02)',
+                        'cta': '0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1)',
+                    },
+                    backgroundImage: {
+                        'gradient-hero': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                        'gradient-dark': 'linear-gradient(180deg, #1E293B 0%, #0F172A 100%)',
+                        'gradient-soft': 'linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%)',
+                        'gradient-cta': 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            html { scroll-behavior: smooth; }
+            body { @apply font-sans bg-slate-50 text-slate-900; }
+            h1, h2, h3, h4 { @apply font-heading font-extrabold tracking-tight text-primary; }
+        }
+        @layer components {
+            .container-tight { @apply max-w-4xl mx-auto px-6; }
+            .container-wide { @apply max-w-6xl mx-auto px-6; }
+            .btn-cta { 
+                @apply inline-flex items-center justify-center rounded-full px-8 py-4 text-lg font-bold text-white bg-gradient-cta shadow-cta transition-all hover:scale-105 active:scale-95 hover:shadow-orange-500/40;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- ============== TOP STRIP ============== -->
+    <div class="bg-accent text-white text-center text-xs sm:text-sm font-semibold py-2 px-4 relative z-50">
+        Exclusivo para donos de negócios locais
+    </div>
+
+    <main class="overflow-x-hidden">
+        
+        <!-- ============== HERO ============== -->
+        <section class="relative bg-gradient-hero text-white overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-accent blur-3xl"></div>
+                <div class="absolute bottom-0 -left-20 w-80 h-80 rounded-full bg-slate-400 blur-3xl"></div>
+            </div>
+
+            <div class="container-tight relative z-10 pt-10 pb-16 sm:pt-16 sm:pb-24">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mb-5 mt-2 text-white">
+                        Seu negócio está <span class="text-accent">invisível</span> enquanto o concorrente lota a agenda.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                        O <strong class="text-accent">Mapa do Marketing Local</strong> é um guia prático que mostra passo a passo como usar Google, Instagram e anúncios simples para trazer clientes da sua região.
+                    </p>
+
+                    <!-- Cartão de oferta -->
+                    <div class="mt-2 mb-7 mx-auto max-w-md text-center">
+                        <div class="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl group">
+                            <img src="assets/oferta-bg.jpg" alt="Ebook Mapa do Marketing Local" class="absolute inset-0 block h-full w-full object-cover scale-[1.08] transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/60"></div>
+                            <div class="pointer-events-none absolute inset-4 rounded-2xl border-2 border-dashed border-accent/40"></div>
+                            
+                            <div class="absolute inset-0 flex flex-col justify-center p-6 sm:p-7">
+                                <div class="inline-block border border-dashed border-accent/70 rounded-full px-4 py-1 mb-4 mx-auto">
+                                    <span class="text-xs sm:text-sm font-bold tracking-widest text-accent uppercase">·· Oferta Especial ··</span>
+                                </div>
+                                <p class="text-xs sm:text-sm uppercase tracking-widest text-white/80 mb-2">
+                                    De <span class="line-through text-white/50">R$ 97</span> por apenas
+                                </p>
+                                <p class="text-6xl sm:text-7xl font-extrabold text-white leading-none mb-3 font-heading">R$ 37</p>
+                                <span class="inline-block bg-accent text-white text-xs sm:text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wide mx-auto">
+                                    62% OFF
+                                </span>
+                                <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap justify-center items-center gap-x-3 gap-y-1 text-xs sm:text-sm text-white/80">
+                                    <span class="inline-flex items-center gap-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 
+                                        Acesso imediato
+                                    </span>
+                                    <span class="text-white/20">·</span>
+                                    <span class="inline-flex items-center gap-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        Garantia de 7 dias
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+                        <a href="#oferta-section" class="btn-cta">
+                            Quero trazer mais clientes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== A DOR ============== -->
+        <section class="py-16 sm:py-24 bg-white">
+            <div class="container-tight">
+                <div class="text-center mb-12">
+                    <span class="inline-block text-destructive text-sm font-bold uppercase tracking-wider mb-3">A realidade hoje</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-primary mb-4">
+                        Você abre o Google e vê seu concorrente em primeiro.
+                    </h2>
+                    <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                        Enquanto o seu negócio quase não aparece. E o pior: nem é porque ele é melhor que o seu.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+                    <!-- Item 1 -->
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-soft hover:shadow-card transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4 text-destructive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <h3 class="text-lg text-primary mb-2">No Google, você some</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Sua ficha está sem foto, sem horário atualizado, sem avaliação. Quem busca seu serviço encontra os outros.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-soft hover:shadow-card transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4 text-destructive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                        <h3 class="text-lg text-primary mb-2">No Instagram, perfil parado</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Você vê concorrentes fazendo Reels, sendo marcados, anunciando. Seu perfil tem só flyer e ninguém engaja.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-soft hover:shadow-card transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4 text-destructive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <h3 class="text-lg text-primary mb-2">Anúncio = dinheiro queimado</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Você já impulsionou post sem saber o que estava fazendo. Gastou, não vendeu, e ficou com medo de tentar de novo.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-gradient-dark text-white rounded-2xl p-8 sm:p-10 text-center shadow-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-accent mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <p class="text-xl sm:text-2xl font-semibold leading-snug max-w-3xl mx-auto">
+                        Enquanto você fica travado, seus concorrentes aparecem antes e <span class="text-accent">levam os clientes que poderiam estar na sua agenda</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== PARA QUEM É ============== -->
+        <section class="py-16 sm:py-24 bg-slate-50">
+            <div class="container-wide">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-primary mb-4">Esse guia é mesmo para você?</h2>
+                    <p class="text-lg text-slate-500">Vamos ser diretos. Veja se você se encaixa.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- É para você -->
+                    <div class="bg-white rounded-2xl p-7 sm:p-8 border-2 border-success/20 shadow-soft">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-full bg-success/10 flex items-center justify-center text-success">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <h3 class="text-2xl text-primary">É para você se…</h3>
+                        </div>
+                        <ul class="space-y-3.5">
+                            <li class="flex gap-3 items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-success shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span class="text-slate-700">Você é dono de barbearia, salão, restaurante, estética ou presta qualquer serviço local.</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-success shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span class="text-slate-700">Você depende hoje de indicação, mas quer mais clientes novos toda semana.</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-success shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span class="text-slate-700">Você se sente perdido com marketing digital e precisa de um caminho simples.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Não é para você -->
+                    <div class="bg-white rounded-2xl p-7 sm:p-8 border-2 border-destructive/10 shadow-soft">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-full bg-destructive/10 flex items-center justify-center text-destructive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </div>
+                            <h3 class="text-2xl text-primary">NÃO é para você se…</h3>
+                        </div>
+                        <ul class="space-y-3.5">
+                            <li class="flex gap-3 items-start opacity-70">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-destructive shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                <span class="text-slate-700">Você já fatura alto com anúncios e tem um time de marketing profissional.</span>
+                            </li>
+                            <li class="flex gap-3 items-start opacity-70">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-destructive shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                <span class="text-slate-700">Você quer "fórmula mágica" para ficar rico sem trabalhar.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== A SOLUÇÃO ============== -->
+        <section class="py-16 sm:py-24 bg-white">
+            <div class="container-wide">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 lg:order-1">
+                        <div class="absolute inset-0 bg-accent/10 blur-3xl rounded-full"></div>
+                        <img src="assets/google-maps-hero.jpg" alt="Cliente encontrando negócio local no Google Maps" class="relative rounded-2xl shadow-card w-full">
+                    </div>
+                    <div class="order-1 lg:order-2 text-center lg:text-left">
+                        <span class="inline-block text-accent text-sm font-bold uppercase tracking-wider mb-3">A solução</span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl text-primary mb-5">
+                            Um <span class="text-accent">mapa</span>, não mais um amontoado de dicas soltas.
+                        </h2>
+                        <p class="text-lg text-slate-500 mb-4 leading-relaxed">
+                            O <strong class="text-primary">Mapa do Marketing Local</strong> é um guia direto ao ponto, escrito em <strong>linguagem de dono de negócio</strong> — não de marqueteiro.
+                        </p>
+                        <p class="text-lg text-slate-500 mb-6 leading-relaxed">
+                            Você não vai sair testando coisa solta. Você vai seguir um caminho claro, passo a passo, para sair da invisibilidade e ser a opção óbvia na sua região.
+                        </p>
+                        <div class="flex justify-center lg:justify-start">
+                            <a href="#oferta-section" class="btn-cta">Quero o mapa agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== O QUE VOCÊ VAI APRENDER ============== -->
+        <section class="py-16 sm:py-24 bg-slate-50">
+            <div class="container-tight max-w-3xl">
+                <div class="text-center mb-12">
+                    <span class="inline-block text-accent text-sm font-bold uppercase tracking-wider mb-3">O conteúdo</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-primary mb-4">O que você vai aprender (e aplicar)</h2>
+                    <p class="text-lg text-slate-500">Sem enrolação. Direto ao que muda o movimento do seu negócio.</p>
+                </div>
+
+                <ul class="space-y-4">
+                    <li class="bg-white border border-slate-100 rounded-2xl p-5 sm:p-6 shadow-soft flex gap-4 items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7 text-success shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-primary mb-1">Chega de tentar adivinhar.</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Descubra o passo a passo para divulgar seu negócio local sem depender de agência ou sobrinho do marketing.</p>
+                        </div>
+                    </li>
+                    <li class="bg-white border border-slate-100 rounded-2xl p-5 sm:p-6 shadow-soft flex gap-4 items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7 text-success shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-primary mb-1">Plano pronto de 30 dias.</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Roteiro dia a dia com o que fazer, onde anunciar e que tipo de post criar.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============== BÔNUS ============== -->
+        <section class="py-16 sm:py-24 bg-gradient-hero text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 blur-3xl rounded-full"></div>
+            <div class="container-tight relative z-10">
+                <div class="text-center mb-12">
+                    <span class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+                        ✨ Bônus inclusos
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-4 text-white">Tudo isso vem junto com o seu Mapa</h2>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4 text-left">
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-5 flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base mb-1 text-white">Modelos de descrição para Google</h4>
+                            <p class="text-slate-300 text-sm">Separados por tipo de negócio local.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-5 flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base mb-1 text-white">Scripts de atendimento no WhatsApp</h4>
+                            <p class="text-slate-300 text-sm">Do primeiro contato até o fechamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== OFERTA / PREÇO ============== -->
+        <section id="oferta-section" class="py-16 sm:py-24 bg-white scroll-mt-20">
+            <div class="container-tight">
+                <div class="bg-gradient-hero text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-20 -right-20 w-72 h-72 bg-accent/20 blur-3xl rounded-full"></div>
+                    
+                    <div class="relative z-10 text-center">
+                        <span class="inline-block bg-accent text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-4 py-1.5 rounded-full mb-5">
+                            Oferta de Lançamento
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
+                            O que você vai <span class="text-accent">aprender</span>
+                        </h2>
+
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 max-w-2xl mx-auto text-left space-y-4">
+                            <div class="flex gap-3 items-start">
+                                <span class="text-accent text-xl mt-0.5">🔸</span>
+                                <p class="text-slate-200"><strong>Google Business:</strong> O passo a passo para ser o 1º da sua região.</p>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <span class="text-accent text-xl mt-0.5">🔸</span>
+                                <p class="text-slate-200"><strong>Instagram Estratégico:</strong> Como passar confiança e fechar vendas.</p>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <span class="text-accent text-xl mt-0.5">🔸</span>
+                                <p class="text-slate-200"><strong>Anúncios Locais:</strong> Atraia quem mora perto sem rasgar dinheiro.</p>
+                            </div>
+                            <div class="flex gap-3 items-start">
+                                <span class="text-accent text-xl mt-0.5">🔸</span>
+                                <p class="text-slate-200"><strong>Plano de 30 dias:</strong> O roteiro exato do que fazer semana a semana.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="mb-4">
+                                <span class="text-slate-400 text-sm line-through">De R$ 97</span>
+                                <div class="flex items-baseline gap-2 justify-center">
+                                    <span class="text-2xl sm:text-3xl font-bold">R$</span>
+                                    <span class="text-6xl sm:text-7xl font-extrabold text-accent font-heading">37</span>
+                                </div>
+                                <p class="text-sm text-slate-400">pagamento único – acesso vitalício</p>
+                            </div>
+                            <a href="https://pay.hubla.app/seu-link-aqui" class="btn-cta w-full sm:w-auto">
+                                🧡 Quero o Mapa agora
+                            </a>
+                            <div class="mt-4 flex items-center gap-4 text-xs text-slate-400">
+                                <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Compra Segura</span>
+                                <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> 7 dias de garantia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== QUEM É JOÃO ============== -->
+        <section class="py-16 sm:py-24 bg-slate-50">
+            <div class="container-wide">
+                <div class="grid md:grid-cols-[auto_1fr] gap-8 sm:gap-12 items-center bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-slate-100">
+                    <div class="relative mx-auto">
+                        <div class="absolute inset-0 bg-accent/20 blur-2xl rounded-full"></div>
+                        <img src="assets/joao-guilherme.jpg" alt="João Guilherme" class="relative w-48 h-48 sm:w-64 sm:h-64 object-cover rounded-full border-4 border-accent shadow-xl">
+                    </div>
+
+                    <div>
+                        <span class="text-accent font-bold uppercase tracking-widest text-sm mb-2 block">O Idealizador</span>
+                        <h3 class="text-3xl text-primary mb-1">João Guilherme</h3>
+                        <p class="text-slate-500 font-semibold mb-5">Gestor de Tráfego Pago • @eujoaoguiga</p>
+                        <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+                            <p>Especialista em tráfego para negócios locais, com mais de <strong class="text-primary">R$ 4,9 milhões gerados</strong> em faturamento para meus clientes.</p>
+                            <p>Hoje estou entre os <strong class="text-primary">Top 100 gestores</strong> da maior mentoria de tráfego da América Latina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== GARANTIA ============== -->
+        <section class="py-16 sm:py-20 bg-slate-100">
+            <div class="container-tight">
+                <div class="bg-white rounded-3xl border-4 border-success/30 p-8 sm:p-10 shadow-card text-center max-w-3xl mx-auto relative">
+                    <div class="w-20 h-20 rounded-full bg-success flex items-center justify-center mx-auto mb-5 -mt-16 shadow-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-11 h-11 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl text-primary mb-3 font-heading">Garantia Incondicional de 7 Dias</h2>
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                        Você tem <strong>7 dias completos</strong> para ler o guia e decidir se é para você. Se entender que o conteúdo não te ajudou, <strong class="text-success">devolvemos 100% do valor pago</strong>. Sem burocracia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== FAQ ============== -->
+        <section class="py-16 sm:py-24 bg-white">
+            <div class="container-tight">
+                <h2 class="text-3xl sm:text-4xl text-center mb-12">Dúvidas Frequentes</h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-slate-100 rounded-xl overflow-hidden shadow-soft">
+                        <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-slate-50 transition-colors">
+                            <span class="font-bold text-primary">Como vou receber o guia?</span>
+                            <svg id="icon-1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div id="faq-1" class="hidden p-5 bg-slate-50 text-slate-600 border-t border-slate-100">
+                            Imediatamente após a confirmação do pagamento, você receberá um e-mail com os dados de acesso à nossa plataforma exclusiva.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-slate-100 rounded-xl overflow-hidden shadow-soft">
+                        <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-slate-50 transition-colors">
+                            <span class="font-bold text-primary">Serve para qualquer negócio?</span>
+                            <svg id="icon-2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div id="faq-2" class="hidden p-5 bg-slate-50 text-slate-600 border-t border-slate-100">
+                            Sim! Barbearias, salões, academias, clínicas, restaurantes e qualquer serviço que atenda clientes em um local físico.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-slate-400 py-10 border-t border-white/5">
+        <div class="container-wide text-center">
+            <p class="font-bold text-white mb-2">Mapa do Marketing Local</p>
+            <p>© 2026 • Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(id) {
+            const el = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            const isHidden = el.classList.contains('hidden');
+            
+            // Fecha todos
+            document.querySelectorAll('[id^="faq-"]').forEach(f => f.classList.add('hidden'));
+            document.querySelectorAll('[id^="icon-"]').forEach(i => i.classList.remove('rotate-180'));
+            
+            if (isHidden) {
+                el.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
