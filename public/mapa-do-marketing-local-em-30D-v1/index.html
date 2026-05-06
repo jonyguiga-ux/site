@@ -85,9 +85,21 @@
         .seal-icon { font-size: 60px; }
         .seal-text p { color: #CBD5E1; font-size: 15px; margin-top: 5px; }
         .dr-footer { background-color: #020617; color: #64748B; padding: 40px 0; font-size: 12px; }
+        /* SEÇÃO TEXTO + IMAGEM */
+        .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .split-section .split-text { }
+        .split-section .split-img img { width: 100%; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+        .split-label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--orange); margin-bottom: 12px; }
+        .split-headline { font-size: 30px; font-weight: 900; line-height: 1.2; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.5px; }
+        .split-body { font-size: 16px; color: var(--gray-dark); line-height: 1.7; margin-bottom: 20px; }
+        .split-stat { background: #F1F5F9; border-left: 4px solid var(--orange); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 12px; }
+        .split-stat strong { font-size: 22px; font-weight: 900; color: var(--navy); display: block; }
+        .split-stat span { font-size: 13px; color: var(--gray-dark); }
         @media (max-width: 768px) {
             .top-tag { font-size: 9px; letter-spacing: 0; padding: 5px 8px; }
             .dr-section { padding: 40px 0; }
+            .split-section { grid-template-columns: 1fr; gap: 30px; }
+            .split-headline { font-size: 22px; }
             .dr-hero { padding: 20px 0 10px 0; }
             .dr-headline { font-size: 22px; margin-bottom: 10px; }
             .dr-subheadline { font-size: 13px; margin-bottom: 12px; }
@@ -161,6 +173,31 @@
                     <span class="btn-main-text" style="font-size:18px;">QUERO SAIR DA INVISIBILIDADE →</span>
                     <span class="btn-sub-text">Acesse o curso por apenas R$ 67,00</span>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PROVA: TEXTO + IMAGEM GOOGLE MAPS -->
+    <section class="dr-section" style="background:#fff;">
+        <div class="container">
+            <div class="split-section">
+                <div class="split-text">
+                    <p class="split-label">A oportunidade que você está perdendo</p>
+                    <h2 class="split-headline">Seus clientes já estão buscando por você no Google.<br><span style="color:var(--orange)">O problema é que eles estão encontrando o seu concorrente.</span></h2>
+                    <p class="split-body">O Google Maps se tornou a nova "lista telefônica" do Brasil. Toda vez que alguém busca um serviço local, aparece uma lista de empresas com estrelas, fotos e endereço. A empresa que aparecer primeiro, leva o cliente.</p>
+                    <div class="split-stat">
+                        <strong>97%</strong>
+                        <span>dos consumidores pesquisam uma empresa online antes de visitar pessoalmente (fonte: BrightLocal)</span>
+                    </div>
+                    <div class="split-stat">
+                        <strong>76%</strong>
+                        <span>das buscas por "perto de mim" resultam em uma visita à loja no mesmo dia</span>
+                    </div>
+                    <p class="split-body" style="font-weight:700; color:var(--navy); margin-top:8px;">O Mapa do Marketing Local te ensina a ocupar esse espaço antes que o seu concorrente o faça.</p>
+                </div>
+                <div class="split-img">
+                    <img src="/mapa-do-marketing-local/google-maps-hero.jpg" alt="Cliente encontrando negócio local no Google Maps">
+                </div>
             </div>
         </div>
     </section>
